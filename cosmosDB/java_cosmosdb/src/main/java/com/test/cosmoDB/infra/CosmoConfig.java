@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-//@EnableCosmosRepositories(basePackages = "com.test.cosmoDB.repository")
+@EnableCosmosRepositories(basePackages = "com.test.cosmoDB.repository")
 public class CosmoConfig extends AbstractCosmosConfiguration {
 
     @Value("${azure.cosmos.uri}")
