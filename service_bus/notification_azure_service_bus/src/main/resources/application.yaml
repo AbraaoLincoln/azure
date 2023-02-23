@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    azure:
+      servicebus:
+        connection-string: ${AZURE_SERVICEBUS_CONNECTION_STRING}
+    stream:
+      bindings:
+        saveNotification-in-0:
+          destination: ${AZURE_SERVICEBUS_TOPIC_NAME}
+          group: ${AZURE_SERVICEBUS_TOPIC_SUBSCRIPTION_NAME}
+      servicebus:
+        bindings:
+          sbt-notification:
+            producer:
+              entity-type: topic
